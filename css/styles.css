@@ -329,7 +329,7 @@ map-aria-description {
 	  max-width: 45%;
 		}
 }
-@media only screen and (min-width: i032px)
+@media only screen and (min-width: 1032px)
  {
 		#restaurants-list li  {
 	  max-width: 300px;
