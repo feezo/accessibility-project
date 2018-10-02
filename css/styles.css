@@ -106,6 +106,14 @@ nav h1 a {
   background-color: #ccc;
 }
 /* ====================== Restaurant Filtering ====================== */
+.filter-select {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	/* height: 100px */
+}
+
 .filter-options {
   width: 100%;
   height: 80px;
@@ -129,8 +137,6 @@ nav h1 a {
   margin: 10px;
   padding: 0 10px;
   width: 200px;
-
-
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -261,7 +267,7 @@ nav h1 a {
 	max-width: 500px
 }
 #restaurant-hours td {
-	color: #666;	
+	color: #666;
 }
 #restaurant-hours tr td :first-of-type {
 	width: 40%;
@@ -329,11 +335,17 @@ map-aria-description {
 	  max-width: 300px;
 		}
 }
-@media only screen and (max-width: 640px){
-	.filter-options select {
+@media only screen and (max-width: 420px){
+	.filter-select {
 		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		height: 20px;
 	}
+}
+@media only screen and (max-width: 420px){
+	.filter-options select {
+    font-size: 8pt;
+}
 }
