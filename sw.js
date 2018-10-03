@@ -5,7 +5,7 @@ self.addEventListener('install', event => {
     caches.open(cacheID).then(cache => {
       return cache.addAll ({
         // '/',
-        "/index.html"
+        "/index.html",
         "/restaurant.html",
         "/css/styles.css",
         "/js",
