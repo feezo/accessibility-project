@@ -1,10 +1,26 @@
-const cacheID = "mws-restaurant-001";
+//const cacheID = "mws-restaurant-001";
+// Define the Caches
+var staticCacheName = 'mws-restaurant-static-v';
+// Set Get Random number for Cache ID
+ var randomNumberBetween0and19999 = Math.floor(Math.random() * 20000);
+ var cache_id = randomNumberBetween0and19999;
+ staticCacheName += cache_id;
+
+
+
+
+
+
+
+
+
+
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(cacheID).then(cache => {
-      return cache.addAll ({
-        // '/',
+    caches.open(staticCacheName).then(cache => {
+      // '/',
+      return cache.addAll ([
         "/index.html",
         "/restaurant.html",
         "/css/styles.css",
@@ -13,9 +29,24 @@ self.addEventListener('install', event => {
         "/js/main.js",
         "js/restaurant_info.js",
         "/js/register.js"
-      }).catch(error => {
+      ]).catch(error => {
         console.log('Caches open failed')
       });
+    })
+  );
+});
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          return cacheName.startsWith('mws-restaurant-') &&
+                 cacheName != staticCacheName;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
     })
   );
 });
@@ -27,7 +58,7 @@ self.addEventListener('fetch', event => {
     const cacheURL = 'restaurant.html';
     cacheRequest = new Request(cacheURL)
   }
-  if(cache;UrlObj.hostname !== 'localhost'){
+  if(cacheUrlObj.hostname !== 'localhost'){
     event.request.mode = 'no cors';
   }
 
