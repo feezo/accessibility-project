@@ -2,7 +2,7 @@
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
-## Project Overview: Stage 1
+## Application Overview
 
 This application incrementally convert a static webpage to a mobile-ready web application .It takes a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. It also creates a seamless offline experience for users.
 
@@ -19,4 +19,4 @@ This application incrementally convert a static webpage to a mobile-ready web ap
 
 ## Leaflet.js and Mapbox:
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
+This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.

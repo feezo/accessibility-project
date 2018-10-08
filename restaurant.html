@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -27,15 +26,13 @@
       </ol>
     </nav>
     <!-- End breadcrumb -->
+
     <!-- End nav -->
 
     <!-- End header -->
     </header>
     <!-- Beginning main -->
     <main id="maincontent">
-      <!-- Beginning map -->
-
-      <!-- End map -->
       <!-- Beginning restaurant -->
       <section id="restaurant-container">
         <h1 id="restaurant-name"></h1>
@@ -45,17 +42,20 @@
       <section id="restaurant-address-and-hours">
         <p id="restaurant-address" aria-labelledby="restaurant-address-label"></p>
         <label id="restaurant-address-label"class="restaurant-info-label">address</label>
+        
+        <!-- Beginning map -->
         <section id="map-container" aria-labelledby="map-aria-description" role="application">
           <div id="map"></div>
         </section>
         <label id="map-aria-description" class="map-aria-description">Google Maps</label>
+        <!-- End map -->
         <div class="restaurant-hours-flex">
           <table id="restaurant-hours" aria-labelledby="restaurant-hours-label"></table>
           <label id="restaurant-hours-label"class="restaurant-info-label">Opening and closing hours</label>
         </div>
       </section>
-
       <!-- end restaurant -->
+
       <!-- Beginning reviews -->
       <section id="reviews-container">
         <ul id="reviews-list"></ul>
@@ -80,7 +80,5 @@
     <!-- Google Maps -->
     <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script> -->
     <!-- End scripts -->
-
   </body>
-
   </html>
