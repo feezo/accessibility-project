@@ -84,3 +84,30 @@ event.respondWith(
   })
   );
 });
+
+
+// event.respondWith(
+//     // First we have to open a specific cache.
+//     caches.open(staticCacheName).then((cache) => {
+//       // Then we try to match the request url within cache.
+//       return cache.match(cacheRequest.url).then((response) => {
+//         // If we match the url within cache, return the cached response.
+//         if (response) return response;
+//
+//         // If url was not matched we try to request it over the netrwork.
+//         return fetch(cacheRequest).then((fetchResponse) => {
+//           // If fetch was successfull we store the response clone in cache.
+//           cache.put(cacheRequest.url, fetchResponse.clone());
+//           // After storing it in cache we return the original response.
+//           return fetchResponse;
+//         })
+//         .catch(error => {
+//           // If fetch failed we respond with an error.
+//           return new Response("Application is not connected to the internet", {
+//             status: 404,
+//             statusText: "Application is not connected to the internet"
+//           });
+//         });
+//       });
+//     })
+//   )
