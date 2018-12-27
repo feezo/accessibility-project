@@ -58,7 +58,7 @@ var staticCacheName = 'mws-restaurant-static-v';
          response ||
          fetch(event.request)
          .then(fetchResponse => {
-           return Caches.open(cacheID).then(cache => {
+           return Caches.open(staticCacheName).then(cache => {
              cache.put(event.request, fetchResponse.clone());
              return fetchResponse;
            });
